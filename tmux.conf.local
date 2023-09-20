@@ -345,8 +345,9 @@ tmux_conf_theme_clock_style="24"
 #   - false (default)
 #   - disabled
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
+# this is in the setup script so it should be installed.
 # on Linux, this requires xsel, xclip or wl-copy
-tmux_conf_copy_to_os_clipboard=false
+tmux_conf_copy_to_os_clipboard=true 
 
 
 # -- user customizations -------------------------------------------------------
@@ -374,9 +375,10 @@ tmux_conf_copy_to_os_clipboard=false
 # bind c new-window -c '#{pane_current_path}' #!important
 
 # move status line to top
-#set -g status-position top
+set -g status-position top
 
-
+# AM keymaps:
+# bind -r m resize-pane -Z # omt has this as '+' which I don't hate 
 # -- tpm -----------------------------------------------------------------------
 
 # while I don't use tpm myself, many people requested official support so here
