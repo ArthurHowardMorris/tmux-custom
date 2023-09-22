@@ -379,6 +379,13 @@ set -g status-position top
 
 # AM keymaps:
 # bind -r m resize-pane -Z # omt has this as '+' which I don't hate 
+# split current window horizontally
+unbind - 
+unbind %
+bind - split-window -v
+# split current window vertically
+unbind _ 
+bind | split-window -h 
 # -- tpm -----------------------------------------------------------------------
 
 # while I don't use tpm myself, many people requested official support so here
